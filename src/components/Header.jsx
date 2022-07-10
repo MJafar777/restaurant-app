@@ -2,11 +2,19 @@ import React from "react";
 import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
 
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 import Logo from "../img/logo.png";
 import Avator from "../img/avatar.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
+  const login =()=>{
+
+  }
+
+
   return (
     <header className="fixed z-50 w-screen  p-6 px-16">
       {/* desctop & tablet*/}
@@ -40,12 +48,15 @@ const Header = () => {
             </div>
           </div>
 
-          <motion.img
-            whileTap={{ scale: 0.6 }}
-            src={Avator}
-            className="w-10 min-w-[40px] min-h-[40px] drop-shadow-xl cursor-pointer"
-            alt="userProfile"
-          />
+          <div className="relative">
+            <motion.img
+              whileTap={{ scale: 0.6 }}
+              src={Avator}
+              className="w-10 min-w-[40px] min-h-[40px] drop-shadow-xl cursor-pointer"
+              alt="userProfile"
+              onClick={login}
+            />
+          </div>
         </div>
       </div>
       {/* mobile*/}

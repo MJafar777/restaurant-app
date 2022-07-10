@@ -17,6 +17,7 @@ const MainContainer = () => {
               className="w-full h-full object-contain"
             />
           </div>
+          
         </div>
         <p className="text-[2.5rem] font-bold tracking-wide text-headingColor">
           The Fastest Delivery in{" "}

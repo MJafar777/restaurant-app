@@ -3,17 +3,20 @@ import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from "../firebase.config";
 
 import Logo from "../img/logo.png";
 import Avator from "../img/avatar.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const firebaseAuth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
-  const login =()=>{
-
-  }
-
+  const login = async () => {
+    const response = await signInWithPopup(firebaseAuth, provider);
+    console.log(response);
+  };
 
   return (
     <header className="fixed z-50 w-screen  p-6 px-16">

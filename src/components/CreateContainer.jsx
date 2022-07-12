@@ -138,7 +138,6 @@ const CreateContainer = () => {
     setCategory("Select Category");
   };
 
-  
   const fetchData = async () => {
     await getAllFoodItems().then((data) => {
       dispatch({
